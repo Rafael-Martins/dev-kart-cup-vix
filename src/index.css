@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import "~antd/dist/antd.dark.min.css";
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Varela Round", sans-serif !important;
+  background-color: #1b223a;
+  color: #dadbbd;
+}
