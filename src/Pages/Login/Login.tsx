@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import React, { useState } from "react";
+import { Col, Container, Row } from "react-grid-system";
 import toast from "react-hot-toast";
+import { Button } from "../../Components/Button";
+import { Input } from "../../Components/Input";
 import { supabase } from "../../services/supabaseClient";
-import { Button, Col, Input, Row } from "antd";
-
-const Container = styled.div``;
 
 const Title = styled.h1`
   font-size: 66px;
@@ -18,7 +18,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const TitleContainer = styled(Row)`
-  margin-top: 5vh;
+  margin-top: 60px;
 `;
 
 const InputContainer = styled(Row)`
@@ -54,21 +54,21 @@ export default function Auth() {
   return (
     <Container>
       <TitleContainer>
-        <Col offset={11} xl={2}>
+        <Col lg={6} offset={{ lg: 9 }}>
           <Title>Login</Title>
         </Col>
       </TitleContainer>
       <DescriptionContainer>
-        <Col offset={11} xl={2}>
-          Faca seu login usando email
+        <Col lg={6} offset={{ lg: 9 }}>
+          Faca login usando apenas seu email
         </Col>
       </DescriptionContainer>
       <InputContainer>
-        <Col span={4} offset={10}>
-          <label>Entre seu email</label>
+        <Col lg={6} offset={{ lg: 9 }}>
           <Input
             id="email"
             type="email"
+            label="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={loading}
@@ -76,8 +76,8 @@ export default function Auth() {
         </Col>
       </InputContainer>
       <Row>
-        <Col span={2} offset={11}>
-          <Button onClick={handleLogin} disabled={loading} type="primary" block>
+        <Col lg={4} offset={{ lg: 10 }}>
+          <Button onClick={handleLogin} disabled={loading} kind="primary">
             Enviar email
           </Button>
         </Col>

@@ -5,7 +5,6 @@ Website to display race info and cup standings from the Vix Developer Cup
 ## Tech inside
 
 - React
-- Antd
 - Emotion
 - Supabase
 
