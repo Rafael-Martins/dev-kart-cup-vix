@@ -33,7 +33,7 @@ const LogoutRow = styled(Row)`
   margin-bottom: 60px;
 `;
 
-const signOut = supabase.auth.signOut;
+const signOut = () => supabase.auth.signOut();
 
 const Profile = ({ session }: ProfileProps) => {
   const [user, setUser] = useState<User | null>(null);
@@ -41,7 +41,6 @@ const Profile = ({ session }: ProfileProps) => {
   useEffect(() => {
     const user = supabase.auth.user();
     setUser(user);
-    console.log(user);
   }, []);
 
   return (
