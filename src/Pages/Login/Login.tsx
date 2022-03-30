@@ -2,26 +2,18 @@ import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
 import toast from "react-hot-toast";
+
 import { Button } from "../../Components/Button";
 import { Input } from "../../Components/Input";
 import { supabase } from "../../services/supabaseClient";
+import { HeaderRow } from "../Styled";
 
-const Title = styled.h1`
-  font-size: 66px;
-  margin-bottom: 6px;
-  text-align: center;
-`;
-
-const DescriptionContainer = styled.div`
+const DescriptionRow = styled(Row)`
   text-align: center;
   margin-bottom: 44px;
 `;
 
-const TitleContainer = styled(Row)`
-  margin-top: 60px;
-`;
-
-const InputContainer = styled(Row)`
+const InputRow = styled(Row)`
   margin-bottom: 6px;
 `;
 
@@ -53,17 +45,17 @@ export default function Auth() {
 
   return (
     <Container>
-      <TitleContainer>
+      <HeaderRow>
         <Col lg={6} offset={{ lg: 9 }}>
-          <Title>Login</Title>
+          Login
         </Col>
-      </TitleContainer>
-      <DescriptionContainer>
+      </HeaderRow>
+      <DescriptionRow>
         <Col lg={6} offset={{ lg: 9 }}>
           Faca login usando apenas seu email
         </Col>
-      </DescriptionContainer>
-      <InputContainer>
+      </DescriptionRow>
+      <InputRow>
         <Col lg={6} offset={{ lg: 9 }}>
           <Input
             id="email"
@@ -74,10 +66,10 @@ export default function Auth() {
             disabled={loading}
           />
         </Col>
-      </InputContainer>
+      </InputRow>
       <Row>
         <Col lg={4} offset={{ lg: 10 }}>
-          <Button onClick={handleLogin} disabled={loading} kind="primary">
+          <Button onClick={handleLogin} disabled={loading} kind="success">
             Enviar email
           </Button>
         </Col>
