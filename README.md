@@ -1,6 +1,13 @@
 # Dev Kart Cup Vix :trophy:
 
-Website to display race info and cup standings from the Vix Developer Cup
+Website to display race info and cup standings from the Vix Developer Cup.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fafb02bb-d3b8-47fc-94b9-2a0c41814bd2/deploy-status)](https://app.netlify.com/sites/vixdevkartcup/deploys)
+[![CI](https://github.com/Rafael-Martins/dev-kart-cup-vix/actions/workflows/node.js.yml/badge.svg)](https://github.com/Rafael-Martins/dev-kart-cup-vix/actions/workflows/node.js.yml)
+
+## Preview
+
+[SITE LINK](https://vixdevkartcup.netlify.app)
 
 ## Tech inside
 
